@@ -7,9 +7,9 @@ namespace MiniBanque.Services
         private List<Client> clients=new();
         private List<Compte> comptes = new();
 
-        private void AjouterClient(Client c)=> clients.Add(c);
+        public void AjouterClient(Client c)=> clients.Add(c);
 
-        private void SupprimerClient(int id)
+        public void SupprimerClient(int id)
         {
             comptes.RemoveAll(c => c.ClientId==id);
             clients.RemoveAll(c => c.NumClient == id);
